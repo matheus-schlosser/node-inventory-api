@@ -1,0 +1,6 @@
+node_modules
+.idea
+.vscode
+NODE_ENV
+sequelize-config-temp.json
+.env

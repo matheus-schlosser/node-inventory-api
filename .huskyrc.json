@@ -1,0 +1,6 @@
+{
+    "hooks": {
+      "pre-push": "yarn lint --fix"
+    }
+}
+    

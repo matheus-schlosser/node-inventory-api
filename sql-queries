@@ -1,0 +1,59 @@
+CREATE DATABASE `admin_app_api` CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+
+CREATE TABLE `clients` (
+  `cl_id` int UNSIGNED NOT NULL AUTO_INCREMENT,
+  `cl_name` varchar(100) NOT NULL,
+  `cl_phone` varchar(30) NOT NULL,
+  `cl_responsible` varchar(20) NOT NULL,
+  `cl_created_at` datetime,
+  `cl_updated_at` datetime,
+  `cl_deleted_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`cl_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `categories` (
+  `cat_id` int UNSIGNED NOT NULL AUTO_INCREMENT,
+  `cat_name` varchar(50) NOT NULL,
+  `cat_image` TEXT NOT NULL,
+  `cat_created_at` datetime,
+  `cat_updated_at` datetime,
+  `cat_deleted_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`cat_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+CREATE TABLE `products` (
+  `pdt_id` int UNSIGNED NOT NULL AUTO_INCREMENT,
+  `pdt_cat_id` int UNSIGNED NOT NULL,
+  `pdt_name` varchar(150) NOT NULL,
+  `pdt_image` TEXT NOT NULL,
+  `pdt_price` varchar(10) NOT NULL,
+  `pdt_created_at` datetime,
+  `pdt_updated_at` datetime,
+  `pdt_deleted_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`pdt_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `orders` (
+  `ord_id` int UNSIGNED NOT NULL AUTO_INCREMENT,
+  `ord_cl_id` int UNSIGNED NOT NULL,
+  `ord_pdt_id` int UNSIGNED NOT NULL,
+  `ord_quantity` int NOT NULL,
+  `ord_status` BOOLEAN NOT NULL,
+  `ord_description` TEXT NOT NULL,
+  `ord_created_at` datetime,
+  `ord_updated_at` datetime,
+  `ord_deleted_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`ord_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+CREATE TABLE `users` (
+  `usr_id` int UNSIGNED NOT NULL AUTO_INCREMENT,
+  `usr_name` varchar(50),
+  `usr_email` varchar(150),
+  `usr_password` TEXT,
+  `usr_created_at` datetime,
+  `usr_updated_at` datetime,
+  `usr_deleted_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`usr_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
