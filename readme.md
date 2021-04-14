@@ -1,9 +1,9 @@
-<h1 align="center">Admin Api</h1>
+<h1 align="center">Inventory Api</h1>
 
 <p align="center">
-  <a href="#-project">Project</a>;
-  <a href="#-technologies">Technologies</a>;
-  <a href="#-usage">Usage</a>
+  <a href="#project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#usage">Usage</a>
 </p>
 
 ## Project
